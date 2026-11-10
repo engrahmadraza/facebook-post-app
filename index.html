@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Post App</title>
+    <script defer src="script.js"></script>
+     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- fb box -->
+    <div class="fbox w-75 m-auto mt-5">
+        <i class="fa-brands fa-square-facebook fblogo fs-5 text-primary d-flex justify-content-center mt-2" ><span class="ps-2">F A C E B O O K</span></i>  
+        <h5 class="text-center pt-4">Share Your Feelings With Others</h5>
+        <button type="button" class="btn btn-primary w-50 d-block m-auto mb-3" data-bs-toggle="modal" data-bs-target="#addpostmodal">Add Post</button>
+    </div>
+    <!-- post Modal -->
+     <!-- Modal -->
+    <div class="modal fade" id="addpostmodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">ADD NEW POST</h1>
+            <button type="button" id="closebtn" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form action="" id="addpostform"> 
+                <input id="title" class="form-control w-100 mb-4" type="text" placeholder="Enter Title ..." required>
+                <input id="description" class="form-control description w-100" type="text" placeholder="Enter Description ..." required>
+                <input id="image" type="file" class="form-control mt-3" multiple>
+                <div id="imgview"></div>
+            </form>     
+        </div>
+        <div class="modal-footer">
+            <button id="addpost" type="button" class="btn btn-primary">Add Post</button>
+        </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- comment modal-->
+        <div class="modal fade" id="Modal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Add Comment</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="" id="cmntform">
+                    <div class="pb-2" id="cmntsinform"></div>
+                    <input id="cmntinput" type="text" class="form-control" placeholder="Add Comment..." required>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="savecmnt" class="btn btn-primary">Add Comment</button>
+            </div>
+            </div>
+        </div>
+        </div>
+        <!-- multipleimgs modal -->
+        <div class="modal fade" id="Modal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">All Images</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id="allimgs" class=""></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+            </div>
+        </div>
+        </div>
+
+    <!-- show posts -->
+    <div id="posts" class="w-50 m-auto mt-5">
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

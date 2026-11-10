@@ -1,0 +1,41 @@
+body{
+    box-sizing: border-box;
+}
+.fbox{
+    border: 2px solid blue;
+    border-radius: 20px;
+}
+.formimg,#editimgs{
+    height: 70px;
+    width: 70px;
+}
+.single-img{
+    height: 550px;
+}
+.two-imgs{
+    height: 390px;
+}
+#firstimg,#secondimg,#thirdimg{
+    object-fit: cover;
+    height: 100%;
+}
+.thirddiv{
+    position: relative;
+}  
+.thirddiv::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+.btndiv{
+    position: relative;
+    z-index: 2;
+} 
+.cmntdiv:hover{
+
+}
